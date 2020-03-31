@@ -1,0 +1,14 @@
+{
+  "name": "@alliedpayment/colorized-logger",
+  "version": "1.0.1",
+  "description": "",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wickdninja",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0"
+  }
+}
