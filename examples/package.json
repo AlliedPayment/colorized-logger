@@ -1,9 +1,8 @@
 {
-  "name": "@alliedpayment/colorized-logger",
-  "version": "1.0.3",
+  "name": "samples",
   "description": "",
-  "main": "logger.js",
   "scripts": {
+    "start": "node sample.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "wickdninja",

@@ -2,45 +2,54 @@ const chalk = require("chalk");
 
 class Logger {
   debug(any, ...optionalParams) {
-    let msg = typeof any == "string" ? chalk.teal(any) : any;
+    const msg = typeof any == "string" ? chalk.blue(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
-      console.debug(msg, optionalParams);
+      console.debug(msg, ...optionalParams);
       return;
     }
     console.debug(msg);
   }
 
   info(any, ...optionalParams) {
-    let msg = typeof any == "string" ? chalk.yellow(any) : any;
+    const msg = typeof any == "string" ? chalk.cyan(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
-      console.info(msg, optionalParams);
+      console.info(msg, ...optionalParams);
       return;
     }
     console.info(msg);
   }
 
   warn(any, ...optionalParams) {
-    let msg = typeof any == "string" ? chalk.orange(any) : any;
+    const msg = typeof any == "string" ? chalk.yellow(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
-      console.warn(msg, optionalParams);
+      console.warn(msg, ...optionalParams);
       return;
     }
     console.warn(msg);
   }
 
-  success(msg, ...optionalParams) {
-    let msg = typeof any == "string" ? chalk.green(any) : any;
+  success(any, ...optionalParams) {
+    const msg = typeof any == "string" ? chalk.green(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
-      console.log(msg, optionalParams);
+      console.log(msg, ...optionalParams);
+      return;
+    }
+    console.log(msg);
+  }
+
+  fail(any, ...optionalParams) {
+    const msg = typeof any == "string" ? chalk.red(any) : any;
+    if (!!optionalParams && optionalParams.length > 0) {
+      console.log(msg, ...optionalParams);
       return;
     }
     console.log(msg);
   }
 
   error(err, ...optionalParams) {
-    let msg = typeof any == "string" ? chalk.red(err) : err;
+    const msg = typeof any == "string" ? chalk.red(err) : err;
     if (!!optionalParams && optionalParams.length > 0) {
-      console.error(msg, optionalParams);
+      console.error(msg, ...optionalParams);
       return;
     }
     console.error(msg);
