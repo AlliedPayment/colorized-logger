@@ -1,8 +1,8 @@
-const chalk = require('chalk');
+const chalk = require("chalk");
 
 class Logger {
   debug(any, ...optionalParams) {
-    const msg = typeof any == 'string' ? chalk.teal(any) : any;
+    let msg = typeof any == "string" ? chalk.teal(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
       console.debug(msg, optionalParams);
       return;
@@ -11,7 +11,7 @@ class Logger {
   }
 
   info(any, ...optionalParams) {
-    const msg = typeof any == 'string' ? chalk.yellow(any) : any;
+    let msg = typeof any == "string" ? chalk.yellow(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
       console.info(msg, optionalParams);
       return;
@@ -20,7 +20,7 @@ class Logger {
   }
 
   warn(any, ...optionalParams) {
-    const msg = typeof any == 'string' ? chalk.orange(any) : any;
+    let msg = typeof any == "string" ? chalk.orange(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
       console.warn(msg, optionalParams);
       return;
@@ -29,7 +29,7 @@ class Logger {
   }
 
   success(msg, ...optionalParams) {
-    const msg = typeof any == 'string' ? chalk.green(any) : any;
+    let msg = typeof any == "string" ? chalk.green(any) : any;
     if (!!optionalParams && optionalParams.length > 0) {
       console.log(msg, optionalParams);
       return;
@@ -38,7 +38,7 @@ class Logger {
   }
 
   error(err, ...optionalParams) {
-    const msg = typeof any == 'string' ? chalk.red(err) : err;
+    let msg = typeof any == "string" ? chalk.red(err) : err;
     if (!!optionalParams && optionalParams.length > 0) {
       console.error(msg, optionalParams);
       return;
